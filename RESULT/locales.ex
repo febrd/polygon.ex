@@ -1,0 +1,22 @@
+{:ok,
+ [
+   %PolygonApi.Local{locale: "G", name: "Global"},
+   %PolygonApi.Local{locale: "US", name: "United States of America"},
+   %PolygonApi.Local{locale: "GB", name: "Great Britain"},
+   %PolygonApi.Local{locale: "CA", name: "Canada"},
+   %PolygonApi.Local{locale: "NL", name: "Netherlands"},
+   %PolygonApi.Local{locale: "GR", name: "Greece"},
+   %PolygonApi.Local{locale: "SP", name: "Spain"},
+   %PolygonApi.Local{locale: "DE", name: "Germany"},
+   %PolygonApi.Local{locale: "BE", name: "Belgium"},
+   %PolygonApi.Local{locale: "DK", name: "Denmark"},
+   %PolygonApi.Local{locale: "FI", name: "Finland"},
+   %PolygonApi.Local{locale: "IE", name: "Ireland"},
+   %PolygonApi.Local{locale: "PT", name: "Portugal"},
+   %PolygonApi.Local{locale: "IN", name: "India"},
+   %PolygonApi.Local{locale: "MX", name: "Mexico"},
+   %PolygonApi.Local{locale: "FR", name: "France"},
+   %PolygonApi.Local{locale: "CN", name: "China"},
+   %PolygonApi.Local{locale: "CH", name: "Switzerland"},
+   %PolygonApi.Local{locale: "SE", name: "Sweden"}
+ ]}

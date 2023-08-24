@@ -17,6 +17,7 @@
                         'Elixir.PolygonApi.Prod.Aggregate',
                         'Elixir.PolygonApi.Prod.Exchange',
                         'Elixir.PolygonApi.Prod.HttpClient',
+                        'Elixir.PolygonApi.Prod.HttpDirect',
                         'Elixir.PolygonApi.Prod.Locales',
                         'Elixir.PolygonApi.Prod.Markets',
                         'Elixir.PolygonApi.Prod.Symbol',

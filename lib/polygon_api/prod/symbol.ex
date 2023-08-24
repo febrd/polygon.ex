@@ -8,6 +8,8 @@ defmodule PolygonApi.Prod.Symbol do
   @type financial :: PolygonApi.Financial.t()
 
   @path "/v1/meta/symbols"
+  @v3_path "https://api.polygon.io/v3/reference"
+  @v3_finance "https://api.polygon.io/vX/reference"
   @details "company"
   @ratings "analysts"
   @dividends "dividends"
@@ -22,7 +24,10 @@ defmodule PolygonApi.Prod.Symbol do
     |> parse_response(PolygonApi.CompanyData)
   end
 
-  @spec ratings(symbol, api_key) :: {:ok, company_ratings}
+  @moduledoc """
+  DEPRECATED
+
+   @spec ratings(symbol, api_key) :: {:ok, company_ratings}
   def ratings(symbol, api_key) do
     [@path, symbol, @ratings]
     |> Path.join()
@@ -53,6 +58,45 @@ defmodule PolygonApi.Prod.Symbol do
     |>  PolygonApi.Prod.HttpClient.get(%{}, api_key)
     |> parse_response([PolygonApi.Financial])
   end
+
+  """
+
+  @spec dividends(symbol, api_key) :: {:ok, map()} | {:error, String.t()}
+  def dividends(symbol, api_key) do
+    url = dividends_url("/#{@financials}", symbol, api_key)
+
+    case PolygonApi.Prod.HttpDirect.get(url, %{}) do
+      {:ok, json} -> {:ok, json}
+      {:error, reason} -> {:error, reason}
+    end
+  end
+
+
+
+
+  @spec financials(symbol, api_key) :: {:ok, map()} | {:error, String.t()}
+  def financials(symbol, api_key) do
+    url = financials_url("/#{@financials}", symbol, api_key)
+
+    case PolygonApi.Prod.HttpDirect.get(url, %{}) do
+      {:ok, json} -> {:ok, json}
+      {:error, reason} -> {:error, reason}
+    end
+  end
+
+
+
+
+  defp financials_url(path, symbol, api_key) do
+    "#{@v3_finance}#{path}?ticker=#{symbol}&apiKey=#{api_key}"
+  end
+
+
+
+  defp dividends_url(path, symbol, api_key) do
+    "#{@v3_path}#{path}?ticker=#{symbol}&apiKey=#{api_key}"
+  end
+
 
   defp parse_response({:ok, data}, [mod | _]) do
     list =

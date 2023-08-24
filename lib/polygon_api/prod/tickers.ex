@@ -3,7 +3,7 @@ defmodule PolygonApi.Prod.Tickers do
   @type shared_error_reasons :: PolygonApi.Prod.HttpClient.shared_error_reasons()
   @type tickers :: PolygonApi.Tickers.t()
 
-  @path "/v2/reference/tickers"
+  @path "/v3/reference/tickers"
 
   @spec query(map, api_key) :: {:ok, tickers} | {:error, shared_error_reasons}
   def query(params, api_key) do
