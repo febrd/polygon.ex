@@ -55,6 +55,5 @@ iex(5)> PolygonApi.Prod.Tickers.query(
 iex(6)> PolygonApi.Prod.Symbol.company_details("AAPL", "YOUR_API_KEY")
 iex(7)> PolygonApi.Prod.Symbol.dividends("AAPL", "YOUR_API_KEY")
 iex(8)> PolygonApi.Prod.Symbol.financials("AAPL", "YOUR_API_KEY")
-
-iex(6)> PolygonApi.Prod.Tipe.query("YOUR_API_KEY")               
+iex(9)> PolygonApi.Prod.Tipe.query("YOUR_API_KEY")               
 ```
