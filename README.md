@@ -31,8 +31,6 @@ Run mix deps.get to install.
 Add the following configuration variables in your `config/config.exs` file:
 
 ```elixir
-use Mix.Config
-
 config :polygon_api, endpoint: "https://api.polygon.io"
 ```
 
@@ -45,5 +43,13 @@ iex(1)> PolygonApi.Prod.Aggregate.query("AAPL", 1, "minute", "2023-01-01", "2023
 iex(2)> PolygonApi.Prod.Exchange.query("YOUR_API_KEY")
 iex(3)> PolygonApi.Prod.Locales.query("YOUR_API_KEY") 
 iex(4)> PolygonApi.Prod.Markets.query("YOUR_API_KEY") 
-
+iex(5)> PolygonApi.Prod.Tickers.query(                                                                             
+...(5)>   %{
+...(5)>     "locale" => "us",
+...(5)>     "page" => 1,
+...(5)>     "perpage" => 50
+...(5)>   },
+...(5)>   "YOUR_API_KEY"
+...(5)> )
+iex(6)> PolygonApi.Prod.Tipe.query("YOUR_API_KEY")               
 ```
