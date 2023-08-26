@@ -48,7 +48,7 @@ Run
 Example Params : 
 ```
 - SYMBOL = AAPL
-- INT_TIME = 1 (Maks 240 - Recommended)
+- INT_TIME = 1 (Max 240 - Recommended)
 - TIME = minute / hour
 - DATE_FROM = 2023-01-01
 - DATE_TO = 2023-08-01
