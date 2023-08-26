@@ -43,7 +43,7 @@ config :polygon_api, endpoint: "https://api.polygon.io"
 ## Usage
 
 
-Example : 
+Params : 
 ```
 - SYMBOL = AAPL
 - INT_TIME = 1
@@ -53,6 +53,7 @@ Example :
 - API_KEY = _ZtJr4WeQpSKn******pHLQQN7_1jgR
 ```
 
+Interactive Elixi :
 ```elixir
 iex(1)> PolygonApi.Prod.Aggregate.query("SYMBOL", "INT_TIME", "TIME", "DATE_FROM", "DATE_TO", "YOUR_API_KEY") 
 iex(2)> PolygonApi.Prod.Exchange.query("YOUR_API_KEY")
