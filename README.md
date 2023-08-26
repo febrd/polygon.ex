@@ -29,7 +29,7 @@ Run
 ```elixir
 • mix deps.get
 • mix compile
-• iex -S mix run
+• iex -S mix run / iex -S mix phx.server
 ```
 
 ## Configuration
