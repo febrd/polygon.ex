@@ -24,13 +24,6 @@ def deps do
 end
 ```
 
-Run
-
-```elixir
-• mix deps.get
-• mix compile
-• iex -S mix run / iex -S mix phx.server
-```
 
 ## Configuration
 
@@ -39,6 +32,15 @@ Add the following configuration variables in your `config/config.exs` file:
 ```elixir
 config :polygon_api, endpoint: "https://api.polygon.io"
 ```
+
+Run
+
+```elixir
+• mix deps.get
+• mix compile
+• iex -S mix run / iex -S mix phx.server
+```
+
 
 ## Usage
 
