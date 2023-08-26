@@ -2,8 +2,7 @@
 
 Polygon.io API Client for Elixir
 
-## Installation
-Specification
+## Specification
 ```elixir
  def project do
     [
@@ -53,7 +52,6 @@ iex(5)> PolygonApi.Prod.Tickers.query(
 ...(5)>   },
 ...(5)>   "YOUR_API_KEY"
 ...(5)> )
-
 iex(6)> PolygonApi.Prod.Symbol.company_details("SYMBOL", "YOUR_API_KEY")
 iex(7)> PolygonApi.Prod.Symbol.dividends("SYMBOL", "YOUR_API_KEY")
 iex(8)> PolygonApi.Prod.Symbol.financials("SYMBOL", "YOUR_API_KEY")
