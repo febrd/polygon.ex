@@ -69,12 +69,13 @@ iex(8)> PolygonApi.Prod.Symbol.financials("SYMBOL", "YOUR_API_KEY")
 iex(9)> PolygonApi.Prod.Tipe.query("YOUR_API_KEY")               
 ```
 
-Need an API_KEY?
-
+Need an API_KEY?     
 Sign up here: https://polygon.io/dashboard/signup
 
 
 
-Best Regard.
 
+
+
+Best Regard.
 Febriansah Dirgantara
