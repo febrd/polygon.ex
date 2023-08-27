@@ -63,7 +63,7 @@ defmodule PolygonApi.Prod.Symbol do
 
   @spec dividends(symbol, api_key) :: {:ok, map()} | {:error, String.t()}
   def dividends(symbol, api_key) do
-    url = dividends_url("/#{@financials}", symbol, api_key)
+    url = dividends_url("/#{@dividends}", symbol, api_key)
 
     case PolygonApi.Prod.HttpDirect.get(url, %{}) do
       {:ok, json} -> {:ok, json}
