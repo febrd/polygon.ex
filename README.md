@@ -35,7 +35,7 @@ config :polygon_api, endpoint: "https://api.polygon.io"
 
 Run
 
-```elixir
+```shell
 • mix deps.get
 • mix compile
 • iex -S mix run / iex -S mix phx.server
@@ -56,7 +56,7 @@ Example Params :
 ```
 
 Interactive Elixir (1.15.2) :
-```elixir
+```shell
 iex(1)> PolygonApi.Prod.Aggregate.query("SYMBOL", "INT_TIME", "TIME", "DATE_FROM", "DATE_TO", "YOUR_API_KEY") 
 iex(2)> PolygonApi.Prod.Exchange.query("YOUR_API_KEY")
 iex(3)> PolygonApi.Prod.Locales.query("YOUR_API_KEY") 
